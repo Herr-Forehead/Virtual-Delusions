@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Hand_Controller : MonoBehaviour
@@ -27,7 +28,7 @@ public class Hand_Controller : MonoBehaviour
     {
       GameObject probablyGun = interactable.transform.gameObject;
 
-      if (probablyGun.TryGetComponent<GunController>(out GunController c))
+      if (probablyGun.TryGetComponent<Gun_Controller>(out Gun_Controller c))
       {
         c.PullTrigger();
       }
